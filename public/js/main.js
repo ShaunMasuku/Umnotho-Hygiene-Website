@@ -55,10 +55,18 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-// Quote links already point to the Contact section. In Milestone 3 this value will
-// preselect the short contact form's enquiry type without changing the link behaviour.
+// Preserve the visitor's intended enquiry so Milestone 3 can pre-populate the
+// short contact form after the page scrolls to the Contact section.
 document.querySelectorAll('.quote-link').forEach((link) => {
   link.addEventListener('click', () => {
     sessionStorage.setItem('umnothoEnquiryType', link.dataset.enquiry || 'Request a Quote');
+    sessionStorage.removeItem('umnothoService');
+  });
+});
+
+document.querySelectorAll('.service-enquiry').forEach((link) => {
+  link.addEventListener('click', () => {
+    sessionStorage.setItem('umnothoEnquiryType', link.dataset.enquiry || 'Request a Quote');
+    sessionStorage.setItem('umnothoService', link.dataset.service || '');
   });
 });
