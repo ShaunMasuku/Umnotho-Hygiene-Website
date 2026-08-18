@@ -4,7 +4,7 @@ Official one-page website for Umnotho Hygiene (Pty) Ltd.
 
 The site is intentionally built with semantic HTML, CSS and vanilla JavaScript to keep it fast, maintainable and inexpensive to host.
 
-## Planned sections
+## Sections
 
 - Home
 - About Us
@@ -23,6 +23,30 @@ Primary brand colours:
 - Light mint: `#e9f5f1`
 - Medical red: `#d1291d`
 
-## Development
+## Development status
 
-Milestone 1 establishes the project foundation, responsive navigation and hero section.
+### Milestone 1 — complete
+
+- Project foundation
+- Responsive navigation
+- Hero section
+- National service-area messaging
+- Floating WhatsApp action
+
+### Milestone 2 — complete
+
+- About Us section
+- Vision, mission and core values
+- Industries / facility types served
+- Six-service portfolio
+- Service-specific enquiry actions
+- Compliance & Credentials strip
+
+### Milestone 3 — next
+
+- Dynamic gallery manifest and responsive carousel
+- Gallery lightbox
+- Contact details
+- Short quote / enquiry form
+- Email delivery integration
+- Footer and privacy page
