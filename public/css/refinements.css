@@ -1,0 +1,17 @@
+.hero-service-line {
+  font-size: 0.66em;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  margin-top: 0.08em;
+}
+
+.nav-whatsapp {
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .hero-service-line {
+    font-size: 0.72em;
+    line-height: 1.08;
+  }
+}
