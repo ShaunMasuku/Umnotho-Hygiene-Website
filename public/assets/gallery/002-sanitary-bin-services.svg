@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitary bin services placeholder</title><desc id="desc">Branded placeholder artwork for Umnotho Hygiene sanitary bin services.</desc>
+  <rect width="1200" height="800" fill="#f7fbfa"/><circle cx="190" cy="650" r="250" fill="#0c4987" opacity=".06"/>
+  <rect x="130" y="130" width="940" height="540" rx="42" fill="#fff" stroke="#dce7e4" stroke-width="4"/>
+  <g transform="translate(205 225)" fill="none" stroke="#0e2742" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"><path d="M40 80h190l-14 235H54L40 80Z"/><path d="M15 80h240M80 80V35h110v45M92 135v120M135 135v120M178 135v120"/></g>
+  <text x="520" y="300" font-family="Arial,sans-serif" font-weight="700" font-size="58" fill="#0e2742">Sanitary Bin Services</text>
+  <text x="520" y="370" font-family="Arial,sans-serif" font-size="30" fill="#617080">Supply, installation and scheduled servicing.</text>
+  <rect x="520" y="430" width="215" height="12" rx="6" fill="#137344"/>
+  <text x="520" y="505" font-family="Arial,sans-serif" font-weight="700" font-size="25" letter-spacing="3" fill="#137344">UMNOTHO HYGIENE</text>
+</svg>
