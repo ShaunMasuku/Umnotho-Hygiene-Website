@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "filename": "001-medical-waste-removal.svg",
+    "src": "assets/gallery/001-medical-waste-removal.svg",
+    "alt": "Medical waste removal",
+    "caption": "Medical waste removal"
+  },
+  {
+    "id": 2,
+    "filename": "002-sanitary-bin-services.svg",
+    "src": "assets/gallery/002-sanitary-bin-services.svg",
+    "alt": "Sanitary bin services",
+    "caption": "Sanitary bin services"
+  },
+  {
+    "id": 3,
+    "filename": "003-pest-control.svg",
+    "src": "assets/gallery/003-pest-control.svg",
+    "alt": "Pest control",
+    "caption": "Pest control"
+  },
+  {
+    "id": 4,
+    "filename": "004-deep-cleaning.svg",
+    "src": "assets/gallery/004-deep-cleaning.svg",
+    "alt": "Deep cleaning",
+    "caption": "Deep cleaning"
+  },
+  {
+    "id": 5,
+    "filename": "005-ppe-hygiene-consumables.svg",
+    "src": "assets/gallery/005-ppe-hygiene-consumables.svg",
+    "alt": "PPE hygiene consumables",
+    "caption": "PPE hygiene consumables"
+  },
+  {
+    "id": 6,
+    "filename": "006-school-facility-support.svg",
+    "src": "assets/gallery/006-school-facility-support.svg",
+    "alt": "School facility support",
+    "caption": "School facility support"
+  }
+]
