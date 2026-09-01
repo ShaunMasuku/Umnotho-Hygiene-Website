@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Medical waste removal placeholder</title><desc id="desc">Branded placeholder artwork for Umnotho Hygiene medical waste removal.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7fbfa"/><stop offset="1" stop-color="#e9f5f1"/></linearGradient></defs>
+  <rect width="1200" height="800" fill="url(#bg)"/><circle cx="925" cy="180" r="210" fill="#d1291d" opacity=".08"/>
+  <rect x="130" y="130" width="940" height="540" rx="42" fill="#fff" stroke="#dce7e4" stroke-width="4"/>
+  <g transform="translate(185 220)"><rect x="0" y="50" width="210" height="260" rx="24" fill="#d1291d"/><rect x="-18" y="20" width="246" height="58" rx="18" fill="#ad2c23"/><text x="105" y="205" text-anchor="middle" font-family="Arial,sans-serif" font-size="88" fill="#fff">☣</text></g>
+  <text x="500" y="300" font-family="Arial,sans-serif" font-weight="700" font-size="58" fill="#0e2742">Medical Waste Removal</text>
+  <text x="500" y="370" font-family="Arial,sans-serif" font-size="30" fill="#617080">Safe collection, handling and transport.</text>
+  <rect x="500" y="430" width="215" height="12" rx="6" fill="#137344"/>
+  <text x="500" y="505" font-family="Arial,sans-serif" font-weight="700" font-size="25" letter-spacing="3" fill="#137344">UMNOTHO HYGIENE</text>
+</svg>
