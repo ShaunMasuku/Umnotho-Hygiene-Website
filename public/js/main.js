@@ -55,8 +55,8 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-// Preserve the visitor's intended enquiry so Milestone 3 can pre-populate the
-// short contact form after the page scrolls to the Contact section.
+// Preserve the visitor's intended enquiry so the short contact form can
+// pre-populate after the page scrolls to the Contact section.
 document.querySelectorAll('.quote-link').forEach((link) => {
   link.addEventListener('click', () => {
     sessionStorage.setItem('umnothoEnquiryType', link.dataset.enquiry || 'Request a Quote');
@@ -70,3 +70,10 @@ document.querySelectorAll('.service-enquiry').forEach((link) => {
     sessionStorage.setItem('umnothoService', link.dataset.service || '');
   });
 });
+
+// Milestone 3 enhances the existing Gallery and Contact placeholder nodes in
+// place so the navigation observers above continue to track the same sections.
+const milestone3Script = document.createElement('script');
+milestone3Script.src = 'js/milestone3.js';
+milestone3Script.defer = true;
+document.body.appendChild(milestone3Script);
