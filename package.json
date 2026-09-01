@@ -1,0 +1,11 @@
+{
+  "name": "umnotho-hygiene-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official one-page website for Umnotho Hygiene (Pty) Ltd.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate-gallery.mjs",
+    "gallery": "node scripts/generate-gallery.mjs"
+  }
+}
