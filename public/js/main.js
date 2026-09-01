@@ -70,10 +70,3 @@ document.querySelectorAll('.service-enquiry').forEach((link) => {
     sessionStorage.setItem('umnothoService', link.dataset.service || '');
   });
 });
-
-// Milestone 3 enhances the existing Gallery and Contact placeholder nodes in
-// place so the navigation observers above continue to track the same sections.
-const milestone3Script = document.createElement('script');
-milestone3Script.src = 'js/milestone3.js';
-milestone3Script.defer = true;
-document.body.appendChild(milestone3Script);
