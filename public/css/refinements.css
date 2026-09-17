@@ -1,3 +1,12 @@
+html {
+  color-scheme: light;
+}
+
+::selection {
+  background: rgba(19, 115, 68, 0.18);
+  color: var(--navy);
+}
+
 .hero-service-line {
   font-size: 0.66em;
   line-height: 1.06;
@@ -9,9 +18,43 @@
   white-space: nowrap;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid rgba(12, 73, 135, 0.42);
+  outline-offset: 4px;
+}
+
+.btn:focus-visible,
+.gallery-arrow:focus-visible,
+.lightbox-arrow:focus-visible,
+.lightbox-close:focus-visible,
+.menu-toggle:focus-visible {
+  outline-color: var(--bright-green);
+}
+
+.nav-link[aria-current="location"] {
+  color: var(--navy);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header {
+    background: rgba(255, 255, 255, 0.99);
+  }
+}
+
 @media (max-width: 720px) {
   .hero-service-line {
     font-size: 0.72em;
     line-height: 1.08;
+  }
+}
+
+@media (max-width: 420px) {
+  .service-chip {
+    max-width: calc(100vw - 38px);
   }
 }
