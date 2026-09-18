@@ -433,7 +433,7 @@
 
 .service-benefits {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 30px;
   border: 1px solid #dce7e4;
   border-radius: 18px;
@@ -470,7 +470,7 @@
 .credentials-shell {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, .92fr) minmax(500px, 1.08fr);
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
   gap: 48px;
   align-items: center;
   overflow: hidden;
@@ -536,7 +536,7 @@
 
 .credentials-list {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 9px;
 }
 
@@ -612,15 +612,15 @@
   }
 
   .service-benefits {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .service-benefits span:nth-child(4) {
+  .service-benefits span:nth-child(3) {
     border-left: 0;
     border-top: 1px solid var(--border);
   }
 
-  .service-benefits span:nth-child(5) {
+  .service-benefits span:nth-child(4) {
     border-top: 1px solid var(--border);
   }
 
@@ -677,8 +677,8 @@
   }
 
   .service-benefits span,
-  .service-benefits span:nth-child(4),
-  .service-benefits span:nth-child(5) {
+  .service-benefits span:nth-child(3),
+  .service-benefits span:nth-child(4) {
     min-height: 62px;
     border-left: 0;
     border-top: 1px solid var(--border);
@@ -700,10 +700,6 @@
 
   .credentials-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .credentials-list div:last-child {
-    grid-column: 1 / -1;
   }
 }
 
