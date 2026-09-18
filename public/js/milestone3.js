@@ -23,7 +23,6 @@
     const nextButton = document.getElementById('gallery-next');
     const dialog = document.getElementById('gallery-lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxPrevious = document.getElementById('lightbox-prev');
     const lightboxNext = document.getElementById('lightbox-next');
     const lightboxClose = document.getElementById('lightbox-close');
@@ -89,8 +88,7 @@
       lightboxIndex = (index + items.length) % items.length;
       const item = items[lightboxIndex];
       lightboxImage.src = item.src;
-      lightboxImage.alt = item.alt || item.caption || 'Umnotho Hygiene gallery image';
-      lightboxCaption.textContent = `${item.caption || item.alt || 'Umnotho Hygiene'} — ${lightboxIndex + 1} of ${items.length}`;
+      lightboxImage.alt = item.alt || `Umnotho Hygiene gallery image ${lightboxIndex + 1}`;
     };
 
     const openLightbox = (index) => {
@@ -110,14 +108,13 @@
       items = await response.json();
 
       if (!Array.isArray(items) || items.length === 0) {
-        track.innerHTML = '<div class="gallery-empty"><strong>Gallery coming soon.</strong><span>Add numbered image files to the gallery folder and run the gallery build script.</span></div>';
+        track.innerHTML = '<div class="gallery-empty"><strong>Gallery coming soon.</strong></div>';
         return;
       }
 
       track.innerHTML = items.map((item, index) => `
-        <button class="gallery-slide" type="button" data-gallery-index="${index}" aria-label="Open ${item.alt || item.caption || `gallery image ${index + 1}`} in full screen">
-          <span class="gallery-image-frame"><img src="${item.src}" alt="${item.alt || ''}" loading="lazy" decoding="async" /></span>
-          <span class="gallery-caption">${item.caption || item.alt || `Gallery image ${index + 1}`}</span>
+        <button class="gallery-slide" type="button" data-gallery-index="${index}" aria-label="Open gallery image ${index + 1} in full screen">
+          <span class="gallery-image-frame"><img src="${item.src}" alt="${item.alt || `Umnotho Hygiene gallery image ${index + 1}`}" loading="lazy" decoding="async" /></span>
         </button>`).join('');
 
       track.querySelectorAll('.gallery-slide').forEach((slide) => {
@@ -160,7 +157,7 @@
       });
     } catch (error) {
       console.error(error);
-      track.innerHTML = '<div class="gallery-empty"><strong>Gallery unavailable.</strong><span>Please check the generated gallery manifest and try again.</span></div>';
+      track.innerHTML = '<div class="gallery-empty"><strong>Gallery temporarily unavailable.</strong></div>';
     }
   };
 
