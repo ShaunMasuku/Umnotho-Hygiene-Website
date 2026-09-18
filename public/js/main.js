@@ -46,6 +46,8 @@ const setActiveNavigation = (sectionId) => {
   });
 };
 
+if (sections[0]) setActiveNavigation(sections[0].id);
+
 if ('IntersectionObserver' in window && sections.length) {
   const sectionObserver = new IntersectionObserver((entries) => {
     const visible = entries
@@ -59,8 +61,6 @@ if ('IntersectionObserver' in window && sections.length) {
   });
 
   sections.forEach((section) => sectionObserver.observe(section));
-} else if (sections[0]) {
-  setActiveNavigation(sections[0].id);
 }
 
 const revealElements = [...document.querySelectorAll('.reveal')];
