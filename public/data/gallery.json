@@ -1,32 +1,17 @@
 [
   {
     "id": 1,
-    "src": "assets/gallery/001-medical-waste-removal.svg",
-    "alt": "Umnotho Hygiene gallery image 1"
+    "src": "assets/gallery/cleaning-spray.webp",
+    "alt": "Professional cleaning and hygiene service image"
   },
   {
     "id": 2,
-    "src": "assets/gallery/002-sanitary-bin-services.svg",
-    "alt": "Umnotho Hygiene gallery image 2"
+    "src": "assets/gallery/clinical-waste-bin.webp",
+    "alt": "Clinical waste container for healthcare waste management"
   },
   {
     "id": 3,
-    "src": "assets/gallery/003-pest-control.svg",
-    "alt": "Umnotho Hygiene gallery image 3"
-  },
-  {
-    "id": 4,
-    "src": "assets/gallery/004-deep-cleaning.svg",
-    "alt": "Umnotho Hygiene gallery image 4"
-  },
-  {
-    "id": 5,
-    "src": "assets/gallery/005-ppe-hygiene-consumables.svg",
-    "alt": "Umnotho Hygiene gallery image 5"
-  },
-  {
-    "id": 6,
-    "src": "assets/gallery/006-school-facility-support.svg",
-    "alt": "Umnotho Hygiene gallery image 6"
+    "src": "assets/gallery/deep-cleaning-fogging.webp",
+    "alt": "Professional deep cleaning service in progress"
   }
 ]
