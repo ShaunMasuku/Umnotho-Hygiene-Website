@@ -1,3 +1,6 @@
+// Cloudflare Pages Function for website enquiries.
+
+// ---------- Response and validation helpers ----------
 const json = (body, status = 200) => new Response(JSON.stringify(body), {
   status,
   headers: {
@@ -17,6 +20,8 @@ const escapeHtml = (value) => value.replace(/[&<>'"]/g, (character) => ({
   '"': '&quot;'
 }[character]));
 
+// ---------- Allowed form values ----------
+
 const allowedEnquiryTypes = new Set(['Request a Quote', 'General Enquiry', 'Ask a Question']);
 const allowedServices = new Set([
   'Medical Waste Removal',
@@ -27,6 +32,8 @@ const allowedServices = new Set([
   'Facility Hygiene Support',
   'Multiple / Not Sure'
 ]);
+
+// ---------- POST /api/contact ----------
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -120,6 +127,8 @@ export async function onRequestPost(context) {
       </div>
     </div>`;
 
+  // ---------- Transactional email delivery ----------
+
   const brevoResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
     method: 'POST',
     headers: {
@@ -145,6 +154,8 @@ export async function onRequestPost(context) {
 
   return json({ ok: true });
 }
+
+// ---------- Unsupported methods ----------
 
 export function onRequestGet() {
   return json({ error: 'Method not allowed.' }, 405);

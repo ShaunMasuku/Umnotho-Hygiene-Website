@@ -16,13 +16,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/refinements.css" />
-  <link rel="stylesheet" href="css/milestone2.css" />
-  <link rel="stylesheet" href="css/milestone3.css" />
+  <link rel="stylesheet" href="css/branding-accessibility.css" />
+  <link rel="stylesheet" href="css/content-sections.css" />
+  <link rel="stylesheet" href="css/gallery-contact-footer.css" />
 </head>
 <body>
   <a class="skip-link" href="#home">Skip to content</a>
 
+  <!-- Site header and primary navigation -->
   <header class="site-header" id="site-header">
     <div class="container nav-shell">
       <a class="brand brand-wordmark" href="#home" aria-label="Umnotho Hygiene home">
@@ -45,6 +46,7 @@
   </header>
 
   <main>
+    <!-- Home / hero -->
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
       <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
@@ -77,14 +79,9 @@
         </div>
       </div>
 
-      <div class="container trust-strip" aria-label="Why choose Umnotho Hygiene">
-        <div class="trust-item"><span class="trust-icon">✓</span><div><strong>Safety Focused</strong><small>Responsible service delivery</small></div></div>
-        <div class="trust-item"><span class="trust-icon">✓</span><div><strong>Reliable Service</strong><small>Responsive client support</small></div></div>
-        <div class="trust-item"><span class="trust-icon">✓</span><div><strong>Professional Team</strong><small>Practical hygiene expertise</small></div></div>
-        <div class="trust-item"><span class="trust-icon">✓</span><div><strong>Scalable Solutions</strong><small>Single &amp; multi-site support</small></div></div>
-      </div>
     </section>
 
+    <!-- About -->
     <section class="content-section about-section" id="about" aria-labelledby="about-title">
       <div class="container">
         <header class="section-heading reveal">
@@ -164,14 +161,11 @@
       </div>
     </section>
 
+    <!-- Services -->
     <section class="content-section services-section" id="services" aria-labelledby="services-title">
       <div class="container">
-        <header class="section-heading services-heading reveal">
-          <div>
-            <span class="section-label">Our Services</span>
-            <h2 id="services-title">Waste Management, Pest Control &amp; Deep Cleaning.</h2>
-          </div>
-          <p>Professional solutions for healthcare, education, commercial and industrial environments, supported by specialist hygiene and facility services.</p>
+        <header class="services-heading reveal">
+          <h2 class="section-label" id="services-title">Our Services</h2>
         </header>
 
         <div class="services-grid">
@@ -245,6 +239,7 @@
       </div>
     </section>
 
+    <!-- Compliance and credentials -->
     <section class="credentials-section" aria-labelledby="credentials-title">
       <div class="container credentials-shell reveal">
         <div class="credentials-copy">
@@ -263,6 +258,7 @@
       </div>
     </section>
 
+    <!-- Gallery -->
     <section class="content-section gallery-section" id="gallery" aria-labelledby="gallery-title">
       <div class="container">
         <h2 class="sr-only" id="gallery-title">Gallery</h2>
@@ -282,6 +278,7 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <header class="contact-heading reveal">
@@ -374,6 +371,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer" id="site-footer">
     <div class="container footer-main">
       <div class="footer-brand-column">
@@ -399,6 +397,7 @@
     <div class="container footer-bottom"><span>© <span id="footer-year"></span> Umnotho Hygiene (Pty) Ltd. All rights reserved.</span><a href="privacy.html">Privacy Notice</a></div>
   </footer>
 
+  <!-- Gallery lightbox -->
   <dialog class="gallery-lightbox" id="gallery-lightbox" aria-label="Gallery image viewer">
     <div class="lightbox-content">
       <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close gallery image">×</button>
@@ -410,7 +409,7 @@
 
   <a class="whatsapp-float" href="https://wa.me/27814648948?text=Hello%20Umnotho%20Hygiene%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat with Umnotho Hygiene on WhatsApp"><span class="whatsapp-label">Chat with us</span><span class="whatsapp-icon" aria-hidden="true">✆</span></a>
 
-  <script src="js/main.js"></script>
-  <script src="js/milestone3.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/gallery-contact.js"></script>
 </body>
 </html>

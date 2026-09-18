@@ -1,3 +1,6 @@
+/* Branding helpers and accessibility-focused overrides. */
+
+/* ---------- Global accessibility helpers ---------- */
 html {
   color-scheme: light;
 }
@@ -18,6 +21,8 @@ html {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+/* ---------- Brand artwork ---------- */
 
 .brand-wordmark {
   display: grid;
@@ -78,6 +83,8 @@ html {
 .footer-brand-name { grid-row: 1; align-self: end; }
 .footer-brand-subname { grid-row: 2; align-self: start; }
 
+/* ---------- Navigation and focus states ---------- */
+
 .nav-whatsapp {
   white-space: nowrap;
 }
@@ -114,6 +121,8 @@ textarea:focus-visible,
   }
 }
 
+/* ---------- Motion preferences ---------- */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto !important;
@@ -133,6 +142,8 @@ textarea:focus-visible,
     transform: none !important;
   }
 }
+
+/* ---------- Responsive branding ---------- */
 
 @media (max-width: 720px) {
   .brand-wordmark {

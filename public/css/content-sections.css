@@ -1,3 +1,6 @@
+/* Shared layout for About, Services and Compliance sections. */
+
+/* ---------- Shared section layout ---------- */
 .content-section {
   position: relative;
   padding: 120px 0;
@@ -35,6 +38,8 @@
   letter-spacing: .15em;
   text-transform: uppercase;
 }
+
+/* ---------- About ---------- */
 
 .about-section {
   overflow: hidden;
@@ -302,6 +307,8 @@
   font-weight: 700;
 }
 
+/* ---------- Services ---------- */
+
 .services-section {
   overflow: hidden;
   background: #f6faf8;
@@ -322,6 +329,11 @@
 .services-heading {
   position: relative;
   z-index: 1;
+  margin-bottom: 28px;
+}
+
+.services-heading .section-label {
+  margin-bottom: 0;
 }
 
 .services-grid {
@@ -462,6 +474,8 @@
   font-size: .75rem;
 }
 
+/* ---------- Compliance & credentials ---------- */
+
 .credentials-section {
   padding: 56px 0;
   background: #f6faf8;
@@ -587,6 +601,8 @@
 .contact-placeholder {
   min-height: 52vh;
 }
+
+/* ---------- Responsive layout ---------- */
 
 @media (max-width: 1060px) {
   .section-heading {

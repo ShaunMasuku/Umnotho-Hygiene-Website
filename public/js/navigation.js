@@ -1,3 +1,6 @@
+// Navigation, scroll state and section reveal behaviour.
+
+// ---------- Header and mobile navigation ----------
 const header = document.getElementById('site-header');
 const menuToggle = document.getElementById('menu-toggle');
 const navigation = document.getElementById('primary-navigation');
@@ -33,6 +36,8 @@ document.addEventListener('keydown', (event) => {
   menuToggle?.focus();
 });
 
+// ---------- Active navigation section ----------
+
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute('href')))
   .filter(Boolean);
@@ -63,6 +68,8 @@ if ('IntersectionObserver' in window && sections.length) {
   sections.forEach((section) => sectionObserver.observe(section));
 }
 
+// ---------- Scroll reveal animations ----------
+
 const revealElements = [...document.querySelectorAll('.reveal')];
 
 if ('IntersectionObserver' in window) {
@@ -78,6 +85,8 @@ if ('IntersectionObserver' in window) {
 } else {
   revealElements.forEach((element) => element.classList.add('visible'));
 }
+
+// ---------- Quote/service intent hand-off ----------
 
 const storeEnquirySelection = (enquiryType, service) => {
   try {

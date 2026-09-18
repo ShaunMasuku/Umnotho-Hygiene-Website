@@ -1,6 +1,11 @@
 (() => {
+  // Gallery, enquiry form and small footer helpers.
+
+  // ---------- Footer year ----------
   const footerYear = document.getElementById('footer-year');
   if (footerYear) footerYear.textContent = String(new Date().getFullYear());
+
+  // ---------- Safe session storage helpers ----------
 
   const storageGet = (key) => {
     try { return sessionStorage.getItem(key); } catch { return null; }
@@ -13,6 +18,8 @@
   const storageRemove = (key) => {
     try { sessionStorage.removeItem(key); } catch { /* Storage is optional. */ }
   };
+
+  // ---------- Gallery carousel and lightbox ----------
 
   const initialiseGallery = async () => {
     const track = document.getElementById('gallery-track');
@@ -161,6 +168,8 @@
     }
   };
 
+  // ---------- Contact / quote form ----------
+
   const initialiseContactForm = () => {
     const form = document.getElementById('contact-form');
     const enquirySelect = document.getElementById('enquiry-type');
@@ -254,6 +263,8 @@
       }
     });
   };
+
+  // ---------- Initialise page features ----------
 
   initialiseGallery();
   initialiseContactForm();
