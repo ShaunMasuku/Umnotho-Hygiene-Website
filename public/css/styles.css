@@ -58,7 +58,7 @@ button, input, textarea, select { font: inherit; }
 .hero-orb { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(2px); }
 .hero-orb-one { width: 360px; height: 360px; right: 8%; top: 17%; background: radial-gradient(circle at center, rgba(58,159,52,.08), rgba(58,159,52,0) 69%); }
 .hero-orb-two { width: 260px; height: 260px; left: -90px; bottom: 60px; background: radial-gradient(circle at center, rgba(12,73,135,.055), rgba(12,73,135,0) 70%); }
-.hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(390px, .94fr); align-items: center; gap: 70px; }
+.hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, .96fr) minmax(460px, 1.04fr); align-items: center; gap: 48px; }
 h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9vw, 5.35rem); line-height: .99; letter-spacing: -.052em; font-weight: 800; }
 .hero-services-title span { display: block; color: inherit; font: inherit; letter-spacing: inherit; }
 .hero-intro { max-width: 690px; margin: 28px 0 0; color: #566777; font-size: clamp(1rem, 1.3vw, 1.18rem); line-height: 1.8; }
@@ -70,20 +70,20 @@ h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9
 .coverage-note strong, .coverage-note span { display: block; }
 .coverage-note strong { color: var(--navy); font-size: .9rem; }
 .coverage-note span { margin-top: 2px; color: var(--muted); font-size: .8rem; }
-.hero-visual { position: relative; min-height: 520px; display: grid; place-items: center; }
-.visual-frame { position: relative; width: min(460px, 92%); aspect-ratio: .91; overflow: hidden; border-radius: 44px 44px 120px 44px; background: var(--navy); box-shadow: 0 30px 70px rgba(14,39,66,.24); }
-.hero-service-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center; }
-.visual-frame::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, rgba(14,39,66,.04) 18%, rgba(14,39,66,.18) 56%, rgba(9,29,51,.90) 100%); }
-.visual-frame::after { content: ""; position: absolute; z-index: 2; width: 210px; height: 210px; border-radius: 50%; left: -95px; bottom: -105px; background: rgba(58,159,52,.22); }
-.visual-copy { position: absolute; z-index: 3; left: 42px; right: 42px; bottom: 38px; color: white; }
-.visual-kicker { display: block; color: #a9e5b4; text-transform: uppercase; font-weight: 800; font-size: .69rem; letter-spacing: .15em; }
-.visual-copy p { margin: 7px 0 0; max-width: 320px; font-size: 1.05rem; font-weight: 600; line-height: 1.45; }
-.service-chip { position: absolute; z-index: 5; display: flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 15px; border-radius: 11px; background: white; color: var(--navy); font-size: .77rem; font-weight: 700; box-shadow: var(--shadow); white-space: nowrap; }
-.service-chip span { width: 9px; height: 9px; border-radius: 50%; background: var(--green); }
-.chip-medical { left: -8px; top: 103px; }
+.hero-visual { position: relative; min-height: 540px; display: grid; place-items: center; }
+.visual-frame { position: relative; width: 100%; max-width: 620px; aspect-ratio: 1.12; overflow: hidden; border-radius: 34px; background: #edf3f1; box-shadow: 0 28px 68px rgba(14,39,66,.18); }
+.hero-service-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.visual-frame::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, transparent 58%, rgba(6,26,45,.12) 100%); pointer-events: none; }
+.visual-frame::after { display: none; }
+.visual-copy { position: absolute; z-index: 3; right: 24px; bottom: 24px; width: min(290px, calc(100% - 48px)); padding: 17px 19px; border: 1px solid rgba(255,255,255,.72); border-radius: 17px; background: rgba(255,255,255,.9); color: var(--navy); box-shadow: 0 18px 44px rgba(14,39,66,.16); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.visual-kicker { display: block; color: var(--green); text-transform: uppercase; font-weight: 800; font-size: .64rem; letter-spacing: .14em; }
+.visual-copy p { margin: 6px 0 0; max-width: 260px; color: var(--navy); font-size: .9rem; font-weight: 700; line-height: 1.4; }
+.service-chip { position: absolute; z-index: 5; display: flex; align-items: center; gap: 9px; min-height: 42px; padding: 0 14px; border: 1px solid rgba(220,231,228,.9); border-radius: 12px; background: rgba(255,255,255,.95); color: var(--navy); font-size: .74rem; font-weight: 700; box-shadow: 0 12px 30px rgba(14,39,66,.14); white-space: nowrap; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.service-chip span { width: 8px; height: 8px; border-radius: 50%; background: var(--green); }
+.chip-medical { left: -22px; top: 88px; }
 .chip-medical span { background: var(--red); }
-.chip-pest { right: -14px; top: 208px; }
-.chip-clean { left: -8px; bottom: 8px; }
+.chip-pest { right: -18px; top: 188px; }
+.chip-clean { left: -12px; bottom: 30px; }
 .chip-clean span { background: var(--blue); }
 
 .placeholder-section { min-height: 65vh; display: flex; align-items: center; padding: 110px 0; }
@@ -121,7 +121,7 @@ h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9
   .hero-grid { grid-template-columns: 1fr; gap: 52px; }
   .hero-copy { max-width: 780px; }
   h1 { max-width: 820px; }
-  .hero-visual { min-height: 480px; }
+  .hero-visual { min-height: 500px; max-width: 760px; }
 }
 
 @media (max-width: 650px) {
@@ -133,15 +133,15 @@ h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9
   .hero-actions { display: grid; grid-template-columns: 1fr; }
   .btn { width: 100%; }
   .coverage-note { align-items: flex-start; }
-  .hero-visual { min-height: 385px; }
-  .visual-frame { width: 92%; border-radius: 30px 30px 82px 30px; }
-  .visual-mark-wrap { inset: 30px 30px 118px; }
-  .visual-copy { left: 28px; right: 28px; bottom: 27px; }
-  .visual-copy p { font-size: .88rem; }
-  .service-chip { min-height: 38px; padding: 0 11px; font-size: .66rem; }
-  .chip-medical { left: 0; top: 80px; }
-  .chip-pest { right: 0; top: 160px; }
-  .chip-clean { left: 0; bottom: 2px; }
+  .hero-visual { min-height: 390px; }
+  .visual-frame { width: 100%; max-width: none; aspect-ratio: .96; border-radius: 24px; }
+  .hero-service-photo { object-position: 57% center; }
+  .visual-copy { right: 14px; bottom: 14px; width: min(255px, calc(100% - 28px)); padding: 14px 15px; border-radius: 14px; }
+  .visual-copy p { font-size: .8rem; }
+  .service-chip { min-height: 36px; padding: 0 10px; font-size: .62rem; }
+  .chip-medical { left: -4px; top: 54px; }
+  .chip-pest { right: -4px; top: 132px; }
+  .chip-clean { left: -4px; bottom: 18px; }
   .placeholder-section { min-height: 56vh; padding: 85px 0; }
   .whatsapp-float { right: 15px; bottom: 15px; }
   .whatsapp-label { display: none; }
