@@ -112,9 +112,22 @@
     try {
       const response = await fetch('data/gallery.json', { cache: 'no-store' });
       if (!response.ok) throw new Error('Gallery data could not be loaded.');
-      items = await response.json();
 
-      if (!Array.isArray(items) || items.length === 0) {
+      const folderImages = await response.json();
+      const designImages = [...document.querySelectorAll('img[data-gallery-image]')].map((image, index) => ({
+        id: `design-${index + 1}`,
+        src: image.currentSrc || image.src,
+        alt: image.alt || `Umnotho Hygiene gallery image ${index + 1}`
+      }));
+
+      const seenSources = new Set();
+      items = [...designImages, ...(Array.isArray(folderImages) ? folderImages : [])].filter((item) => {
+        if (!item?.src || seenSources.has(item.src)) return false;
+        seenSources.add(item.src);
+        return true;
+      });
+
+      if (items.length === 0) {
         track.innerHTML = '<div class="gallery-empty"><strong>Gallery coming soon.</strong></div>';
         return;
       }
