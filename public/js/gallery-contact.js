@@ -114,18 +114,9 @@
       if (!response.ok) throw new Error('Gallery data could not be loaded.');
 
       const folderImages = await response.json();
-      const designImages = [...document.querySelectorAll('img[data-gallery-image]')].map((image, index) => ({
-        id: `design-${index + 1}`,
-        src: image.currentSrc || image.src,
-        alt: image.alt || `Umnotho Hygiene gallery image ${index + 1}`
-      }));
-
-      const seenSources = new Set();
-      items = [...designImages, ...(Array.isArray(folderImages) ? folderImages : [])].filter((item) => {
-        if (!item?.src || seenSources.has(item.src)) return false;
-        seenSources.add(item.src);
-        return true;
-      });
+      items = Array.isArray(folderImages)
+        ? folderImages.filter((item) => item?.src)
+        : [];
 
       if (items.length === 0) {
         track.innerHTML = '<div class="gallery-empty"><strong>Gallery coming soon.</strong></div>';
