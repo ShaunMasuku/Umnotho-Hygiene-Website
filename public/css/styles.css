@@ -65,6 +65,7 @@ h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
 .coverage-note { display: flex; align-items: center; gap: 14px; margin-top: 36px; }
 .coverage-icon { display: grid; place-items: center; width: 45px; height: 45px; border-radius: 50%; flex: 0 0 auto; background: var(--mint); color: var(--green); font-size: 1.4rem; }
+.coverage-icon i { font-size: 1.1rem; line-height: 1; }
 .coverage-note p { margin: 0; }
 .coverage-note strong, .coverage-note span { display: block; }
 .coverage-note strong { color: var(--navy); font-size: .9rem; }
@@ -104,6 +105,7 @@ h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9
 .whatsapp-float { position: fixed; z-index: 90; right: 25px; bottom: 24px; display: flex; align-items: center; gap: 9px; }
 .whatsapp-label { padding: 8px 12px; border-radius: 9px; color: var(--navy); background: white; font-size: .78rem; font-weight: 700; box-shadow: 0 9px 24px rgba(14,39,66,.13); opacity: 0; transform: translateX(6px); transition: .2s ease; }
 .whatsapp-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; color: white; background: #25D366; font-size: 1.5rem; box-shadow: 0 14px 28px rgba(37,211,102,.26); }
+.whatsapp-icon i { font-size: 1.65rem; line-height: 1; }
 .whatsapp-float:hover .whatsapp-label { opacity: 1; transform: translateX(0); }
 .reveal { opacity: 0; transform: translateY(15px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
