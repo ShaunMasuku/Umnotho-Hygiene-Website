@@ -1,4 +1,4 @@
-# Umnotho Hygiene Website
+# Umnotho Hygiene Website (I am vibing coding this completely, not touching a single line of code)
 
 Official one-page website for Umnotho Hygiene (Pty) Ltd.
 
