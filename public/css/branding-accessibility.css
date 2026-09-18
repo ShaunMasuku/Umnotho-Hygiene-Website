@@ -49,14 +49,6 @@ html {
 .brand-wordmark .brand-name { grid-row: 1; align-self: end; }
 .brand-wordmark .brand-subname { grid-row: 2; align-self: start; }
 
-.visual-mark-wrap::before {
-  content: "";
-  width: min(240px, 84%);
-  aspect-ratio: 404 / 423;
-  background: url("../assets/branding/umnotho-emblem.webp") center / contain no-repeat;
-  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .16));
-}
-
 .footer-brand-badge > a {
   display: grid;
   width: max-content;
