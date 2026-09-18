@@ -362,16 +362,10 @@
   line-height: 0;
 }
 
-.contact-item-icon svg {
+.contact-item-icon i {
   display: block;
-  width: 27px;
-  height: 27px;
-  flex: 0 0 auto;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .contact-item strong,
@@ -423,10 +417,11 @@
   transform: translateY(-2px);
 }
 
-.social-link svg {
+.social-link i {
   width: 17px;
-  height: 17px;
-  fill: currentColor;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .enquiry-card {
@@ -683,10 +678,9 @@
   border-color: rgba(255, 255, 255, .28);
 }
 
-.footer-socials svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
+.footer-socials i {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .footer-bottom {

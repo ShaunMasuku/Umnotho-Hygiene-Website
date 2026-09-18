@@ -267,15 +267,10 @@
   background: var(--mint);
 }
 
-.principle-icon svg,
-.service-icon svg {
-  width: 27px;
-  height: 27px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.principle-icon i,
+.service-icon i {
+  font-size: 1.45rem;
+  line-height: 1;
 }
 
 .principle-card h3 {
@@ -577,8 +572,7 @@
   border-radius: 50%;
   color: #b9efc1;
   background: rgba(185, 239, 193, .1);
-  font-size: .78rem;
-  font-weight: 900;
+  font-size: .76rem;
 }
 
 .credentials-list strong,

@@ -7,6 +7,7 @@ Official one-page website for Umnotho Hygiene (Pty) Ltd.
 - HTML
 - CSS
 - Vanilla JavaScript
+- Font Awesome Free for interface icons
 - Cloudflare Pages Functions for the contact form
 
 ## Main sections
