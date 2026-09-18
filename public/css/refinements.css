@@ -40,10 +40,6 @@ html {
   filter: drop-shadow(0 18px 28px rgba(0, 0, 0, .16));
 }
 
-.visual-mark-wrap .emblem-shell {
-  display: none;
-}
-
 .footer-brand-column > a {
   display: grid;
   width: max-content;
@@ -101,6 +97,10 @@ textarea:focus-visible,
 
 .nav-link[aria-current="location"] {
   color: var(--navy);
+}
+
+.site-header {
+  -webkit-backdrop-filter: blur(16px);
 }
 
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
