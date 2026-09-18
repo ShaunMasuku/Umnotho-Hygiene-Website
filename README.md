@@ -24,6 +24,14 @@ Primary brand colours:
 - Light mint: `#e9f5f1`
 - Medical red: `#d1291d`
 
+Official web branding asset:
+
+```text
+public/assets/branding/umnotho-emblem.webp
+```
+
+The emblem is used alongside the Umnotho wordmark treatment across the site and as the browser icon.
+
 ## Development status
 
 ### Milestone 1 — complete
@@ -56,6 +64,19 @@ Primary brand colours:
 - Transactional email endpoint
 - Footer
 - Privacy Notice
+
+### Milestone 4A — production polish complete
+
+- Production metadata, canonical URL and social-sharing metadata
+- Official Umnotho emblem integrated into navigation, hero, footer, favicon and Privacy Notice
+- Public-facing gallery and contact copy cleaned up
+- Keyboard navigation and mobile-menu behaviour hardened
+- Active navigation exposed with `aria-current`
+- Visible focus states for keyboard users
+- Reduced-motion support and progressive fallbacks for older browsers
+- Privacy Notice presentation and wording refined for launch
+
+Remaining launch preparation is intentionally kept outside this milestone: real project photography, staging deployment, transactional-email production configuration, custom-domain DNS cut-over and final device/browser QA.
 
 ## Gallery workflow
 
