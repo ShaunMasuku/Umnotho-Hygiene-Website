@@ -329,6 +329,11 @@
 .services-heading {
   position: relative;
   z-index: 1;
+  margin-bottom: 28px;
+}
+
+.services-heading .section-label {
+  margin-bottom: 0;
 }
 
 .services-grid {
