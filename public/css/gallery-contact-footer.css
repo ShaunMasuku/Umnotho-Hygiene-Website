@@ -341,7 +341,7 @@
 
 .contact-item {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
+  grid-template-columns: 46px minmax(0, 1fr);
   gap: 13px;
   align-items: start;
   padding: 14px;
