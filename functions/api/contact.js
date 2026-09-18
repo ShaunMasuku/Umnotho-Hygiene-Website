@@ -24,7 +24,7 @@ const allowedServices = new Set([
   'Pest Control',
   'Deep Cleaning',
   'PPE & Hygiene Consumables',
-  'School & Facility Hygiene Support',
+  'Facility Hygiene Support',
   'Multiple / Not Sure'
 ]);
 
