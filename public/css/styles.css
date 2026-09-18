@@ -223,87 +223,6 @@ h1 {
   display: none;
 }
 
-.visual-copy {
-  position: absolute;
-  z-index: 4;
-  top: 34%;
-  right: 7%;
-  bottom: auto;
-  width: min(330px, calc(100% - 56px));
-  min-height: 118px;
-  padding: 21px 23px;
-  border: 1px solid rgba(220,231,228,.95);
-  border-radius: 20px;
-  background: #ffffff;
-  color: var(--navy);
-  box-shadow: 0 20px 48px rgba(14,39,66,.16);
-}
-
-.visual-kicker {
-  display: block;
-  color: var(--green);
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: .64rem;
-  letter-spacing: .14em;
-}
-
-.visual-copy p {
-  margin: 7px 0 0;
-  max-width: 270px;
-  color: var(--navy);
-  font-size: .92rem;
-  font-weight: 700;
-  line-height: 1.45;
-}
-
-.service-chip {
-  position: absolute;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 38px;
-  padding: 0 12px;
-  border: 1px solid rgba(220,231,228,.9);
-  border-radius: 10px;
-  background: rgba(255,255,255,.94);
-  color: var(--navy);
-  font-size: .68rem;
-  font-weight: 700;
-  box-shadow: 0 10px 24px rgba(14,39,66,.12);
-  white-space: nowrap;
-}
-
-.service-chip span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--green);
-}
-
-.chip-medical {
-  left: 22px;
-  top: 26px;
-}
-
-.chip-medical span {
-  background: var(--red);
-}
-
-.chip-pest {
-  right: 24px;
-  bottom: 28px;
-}
-
-.chip-clean {
-  left: 22px;
-  bottom: 28px;
-}
-
-.chip-clean span {
-  background: var(--blue);
-}
 
 .placeholder-section { min-height: 65vh; display: flex; align-items: center; padding: 110px 0; }
 .placeholder-section.alt { background: #f7faf9; }
@@ -421,40 +340,6 @@ h1 {
     object-position: 47% center;
   }
 
-  .visual-copy {
-    top: 35%;
-    right: 10px;
-    bottom: auto;
-    width: min(280px, calc(100% - 20px));
-    min-height: 104px;
-    padding: 14px 15px;
-    border-radius: 14px;
-  }
-
-  .visual-copy p {
-    font-size: .8rem;
-  }
-
-  .service-chip {
-    min-height: 34px;
-    padding: 0 9px;
-    font-size: .6rem;
-  }
-
-  .chip-medical {
-    left: 10px;
-    top: 12px;
-  }
-
-  .chip-pest {
-    right: 10px;
-    bottom: 100px;
-  }
-
-  .chip-clean {
-    left: 10px;
-    bottom: 14px;
-  }
   .placeholder-section { min-height: 56vh; padding: 85px 0; }
   .whatsapp-float { right: 15px; bottom: 15px; }
   .whatsapp-label { display: none; }
