@@ -56,7 +56,7 @@ button, input, textarea, select { font: inherit; }
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: calc(var(--header-height) + 560px);
+  min-height: calc(var(--header-height) + 680px);
   padding: var(--header-height) 0 0;
   background: #ffffff;
 }
@@ -94,7 +94,7 @@ button, input, textarea, select { font: inherit; }
 .hero .hero-grid {
   width: 100%;
   max-width: none;
-  min-height: 560px;
+  min-height: 680px;
   margin: 0;
   display: grid;
   grid-template-columns: minmax(0, 49%) minmax(0, 51%);
@@ -191,7 +191,7 @@ h1 {
 .hero-visual {
   position: relative;
   z-index: 2;
-  min-height: 560px;
+  min-height: 680px;
 }
 
 .visual-frame {
@@ -207,7 +207,7 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 44% center;
 }
 
 .visual-frame::before {
