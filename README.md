@@ -78,6 +78,15 @@ The emblem is used alongside the Umnotho wordmark treatment across the site and 
 
 Remaining launch preparation is intentionally kept outside this milestone: real project photography, staging deployment, transactional-email production configuration, custom-domain DNS cut-over and final device/browser QA.
 
+### Design review refinements
+
+- Navigation simplified so Request a Quote is the single contact CTA in the header
+- Hero and services positioning aligned to Waste Management, Pest Control & Deep Cleaning
+- Facility Hygiene Support naming simplified
+- COIDA added to the expandable credentials grid
+- Gallery simplified to images only with filename-agnostic rendering
+- Contact icons, footer brand contrast and Privacy Notice return navigation refined
+
 ## Gallery workflow
 
 Gallery images live in:
@@ -86,27 +95,21 @@ Gallery images live in:
 public/assets/gallery/
 ```
 
-Use a numeric filename prefix to control display order:
-
-```text
-001-medical-waste.jpg
-002-deep-cleaning.jpg
-003-pest-control.png
-```
-
-Then run:
+Image filenames are not shown on the website and do not need to follow a naming convention. Drop any supported image into the folder and run:
 
 ```bash
 npm run build
 ```
 
-The build script scans the folder and regenerates:
+The build script scans every supported image in the folder and regenerates:
 
 ```text
 public/data/gallery.json
 ```
 
-Supported image extensions are JPG, JPEG, PNG, WebP, AVIF, GIF and SVG. The gallery displays the complete image without cropping, stretching or zoom-to-fill.
+The Cloudflare Pages deployment will use the same `npm run build` command, so adding an image and pushing the change is enough for it to be included in the deployed gallery. Files are sorted deterministically by filename, but filenames are never rendered as gallery titles or captions.
+
+Supported image extensions are JPG, JPEG, PNG, WebP, AVIF, GIF and SVG. Gallery images use `object-fit: contain`, so the complete image is shown while preserving its aspect ratio rather than cropping or stretching it.
 
 ## Contact form
 
