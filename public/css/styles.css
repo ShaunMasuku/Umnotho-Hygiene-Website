@@ -71,10 +71,10 @@ h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9
 .coverage-note strong { color: var(--navy); font-size: .9rem; }
 .coverage-note span { margin-top: 2px; color: var(--muted); font-size: .8rem; }
 .hero-visual { position: relative; min-height: 520px; display: grid; place-items: center; }
-.visual-frame { position: relative; width: min(460px, 92%); aspect-ratio: .91; overflow: hidden; border-radius: 44px 44px 120px 44px; background: linear-gradient(155deg, var(--navy), #164a70 66%, var(--green)); box-shadow: 0 30px 70px rgba(14,39,66,.24); }
-.visual-frame::before { content: ""; position: absolute; width: 330px; height: 330px; border-radius: 50%; right: -70px; top: -86px; border: 46px solid rgba(255,255,255,.07); }
-.visual-frame::after { content: ""; position: absolute; width: 210px; height: 210px; border-radius: 50%; left: -70px; bottom: -88px; background: rgba(58,159,52,.19); }
-.visual-mark-wrap { position: absolute; inset: 46px 45px 145px; display: grid; place-items: center; z-index: 2; }
+.visual-frame { position: relative; width: min(460px, 92%); aspect-ratio: .91; overflow: hidden; border-radius: 44px 44px 120px 44px; background: var(--navy); box-shadow: 0 30px 70px rgba(14,39,66,.24); }
+.hero-service-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center; }
+.visual-frame::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, rgba(14,39,66,.04) 18%, rgba(14,39,66,.18) 56%, rgba(9,29,51,.90) 100%); }
+.visual-frame::after { content: ""; position: absolute; z-index: 2; width: 210px; height: 210px; border-radius: 50%; left: -95px; bottom: -105px; background: rgba(58,159,52,.22); }
 .emblem-shell { position: relative; width: min(250px, 84%); aspect-ratio: 1; display: grid; place-items: center; border: 12px solid rgba(58,159,52,.92); border-right-color: rgba(12,73,135,.96); border-bottom-color: rgba(12,73,135,.96); border-radius: 50%; filter: drop-shadow(0 18px 28px rgba(0,0,0,.14)); }
 .emblem-shell::after { content: ""; position: absolute; inset: 20px; border-radius: 50%; border: 2px solid rgba(255,255,255,.16); }
 .emblem-leaf { position: absolute; top: -21px; left: 20px; color: #72be42; font-size: 3rem; transform: rotate(-18deg); }
