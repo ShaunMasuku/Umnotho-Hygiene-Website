@@ -3,12 +3,6 @@ const menuToggle = document.getElementById('menu-toggle');
 const navigation = document.getElementById('primary-navigation');
 const navLinks = [...document.querySelectorAll('.nav-link')];
 
-const favicon = document.createElement('link');
-favicon.rel = 'icon';
-favicon.type = 'image/webp';
-favicon.href = 'assets/branding/umnotho-emblem.webp';
-document.head.appendChild(favicon);
-
 const setHeaderState = () => {
   if (!header) return;
   header.classList.toggle('scrolled', window.scrollY > 12);
