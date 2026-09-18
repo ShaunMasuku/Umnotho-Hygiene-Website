@@ -1,3 +1,5 @@
+/* Global variables, base styles, navigation and hero. */
+
 :root {
   --navy: #0e2742;
   --green: #137344;
@@ -25,6 +27,8 @@ button, input, textarea, select { font: inherit; }
 .skip-link { position: fixed; top: 12px; left: 12px; z-index: 1000; transform: translateY(-180%); background: var(--navy); color: white; padding: 10px 16px; border-radius: 8px; }
 .skip-link:focus { transform: translateY(0); }
 
+/* ---------- Header and navigation ---------- */
+
 .site-header { position: fixed; inset: 0 0 auto 0; z-index: 100; background: rgba(255,255,255,.94); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(14,39,66,.07); transition: box-shadow .25s ease, background .25s ease; }
 .site-header.scrolled { box-shadow: 0 10px 35px rgba(14,39,66,.09); background: rgba(255,255,255,.985); }
 .nav-shell { min-height: var(--header-height); display: flex; align-items: center; justify-content: space-between; gap: 30px; }
@@ -47,14 +51,14 @@ button, input, textarea, select { font: inherit; }
 .menu-toggle { display: none; width: 44px; height: 44px; border: 0; padding: 8px; background: transparent; cursor: pointer; }
 .menu-toggle span { display: block; width: 100%; height: 2px; background: var(--navy); margin: 6px 0; border-radius: 5px; transition: .2s ease; }
 
+/* ---------- Hero ---------- */
+
 .hero { position: relative; overflow: hidden; min-height: 100vh; padding: calc(var(--header-height) + 82px) 0 46px; background: linear-gradient(140deg, #fff 0%, #fff 47%, #f4faf8 100%); }
 .hero::before { content: ""; position: absolute; width: 520px; height: 520px; border: 1px solid rgba(19,115,68,.09); border-radius: 50%; right: -160px; top: 95px; }
 .hero-orb { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(2px); }
 .hero-orb-one { width: 360px; height: 360px; right: 8%; top: 17%; background: radial-gradient(circle at center, rgba(58,159,52,.08), rgba(58,159,52,0) 69%); }
 .hero-orb-two { width: 260px; height: 260px; left: -90px; bottom: 60px; background: radial-gradient(circle at center, rgba(12,73,135,.055), rgba(12,73,135,0) 70%); }
 .hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(390px, .94fr); align-items: center; gap: 70px; }
-.eyebrow { display: flex; align-items: center; gap: 11px; color: var(--green); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 22px; }
-.eyebrow span { width: 32px; height: 2px; background: var(--green); }
 h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9vw, 5.35rem); line-height: .99; letter-spacing: -.052em; font-weight: 800; }
 .hero-services-title span { display: block; color: inherit; font: inherit; letter-spacing: inherit; }
 .hero-intro { max-width: 690px; margin: 28px 0 0; color: #566777; font-size: clamp(1rem, 1.3vw, 1.18rem); line-height: 1.8; }
@@ -88,13 +92,6 @@ h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9
 .chip-pest { right: -14px; top: 208px; }
 .chip-clean { left: -8px; bottom: 8px; }
 .chip-clean span { background: var(--blue); }
-.trust-strip { position: relative; margin-top: 60px; display: grid; grid-template-columns: repeat(4, 1fr); background: white; border: 1px solid var(--border); border-radius: 18px; box-shadow: 0 14px 35px rgba(14,39,66,.06); overflow: hidden; }
-.trust-item { min-height: 92px; display: flex; align-items: center; gap: 12px; padding: 18px 24px; }
-.trust-item + .trust-item { border-left: 1px solid var(--border); }
-.trust-icon { display: grid; place-items: center; width: 34px; height: 34px; flex: 0 0 auto; border-radius: 50%; background: var(--mint); color: var(--green); font-weight: 800; }
-.trust-item strong, .trust-item small { display: block; }
-.trust-item strong { color: var(--navy); font-size: .88rem; }
-.trust-item small { margin-top: 2px; color: var(--muted); font-size: .72rem; }
 
 .placeholder-section { min-height: 65vh; display: flex; align-items: center; padding: 110px 0; }
 .placeholder-section.alt { background: #f7faf9; }
@@ -102,12 +99,16 @@ h1 { margin: 0; max-width: 760px; color: var(--navy); font-size: clamp(3rem, 5.9
 .section-label { display: inline-block; margin-bottom: 14px; color: var(--green); font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .16em; }
 .placeholder-section h2 { margin: 0; color: var(--navy); font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.1; letter-spacing: -.035em; }
 .placeholder-section p { max-width: 700px; color: var(--muted); font-size: 1.05rem; }
+/* ---------- Floating WhatsApp action ---------- */
+
 .whatsapp-float { position: fixed; z-index: 90; right: 25px; bottom: 24px; display: flex; align-items: center; gap: 9px; }
 .whatsapp-label { padding: 8px 12px; border-radius: 9px; color: var(--navy); background: white; font-size: .78rem; font-weight: 700; box-shadow: 0 9px 24px rgba(14,39,66,.13); opacity: 0; transform: translateX(6px); transition: .2s ease; }
 .whatsapp-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; color: white; background: #25D366; font-size: 1.5rem; box-shadow: 0 14px 28px rgba(37,211,102,.26); }
 .whatsapp-float:hover .whatsapp-label { opacity: 1; transform: translateX(0); }
 .reveal { opacity: 0; transform: translateY(15px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ---------- Responsive layout ---------- */
 
 @media (max-width: 1020px) {
   :root { --header-height: 78px; }
