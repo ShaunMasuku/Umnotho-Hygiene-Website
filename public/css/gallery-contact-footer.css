@@ -383,6 +383,9 @@
   color: var(--muted);
   font-size: .87rem;
   line-height: 1.55;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-item a:hover span { color: var(--green); }
