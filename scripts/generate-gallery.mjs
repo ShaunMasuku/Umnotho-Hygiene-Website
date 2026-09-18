@@ -16,21 +16,10 @@ const files = (await readdir(galleryDirectory, { withFileTypes: true }))
   .map((entry) => entry.name)
   .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
 
-const humaniseFilename = (filename) => {
-  const withoutExtension = filename.replace(/\.[^.]+$/, '');
-  const withoutOrderingPrefix = withoutExtension.replace(/^\d+[\s._-]*/, '');
-  const words = withoutOrderingPrefix.replace(/[_-]+/g, ' ').replace(/\s+/g, ' ').trim();
-
-  if (!words) return 'Umnotho Hygiene service photo';
-  return words.charAt(0).toUpperCase() + words.slice(1);
-};
-
 const gallery = files.map((filename, index) => ({
   id: index + 1,
-  filename,
   src: `assets/gallery/${encodeURIComponent(filename)}`,
-  alt: humaniseFilename(filename),
-  caption: humaniseFilename(filename)
+  alt: `Umnotho Hygiene gallery image ${index + 1}`
 }));
 
 await writeFile(outputFile, `${JSON.stringify(gallery, null, 2)}\n`, 'utf8');
