@@ -2,6 +2,18 @@
   const footerYear = document.getElementById('footer-year');
   if (footerYear) footerYear.textContent = String(new Date().getFullYear());
 
+  const storageGet = (key) => {
+    try { return sessionStorage.getItem(key); } catch { return null; }
+  };
+
+  const storageSet = (key, value) => {
+    try { sessionStorage.setItem(key, value); } catch { /* Storage is optional. */ }
+  };
+
+  const storageRemove = (key) => {
+    try { sessionStorage.removeItem(key); } catch { /* Storage is optional. */ }
+  };
+
   const initialiseGallery = async () => {
     const track = document.getElementById('gallery-track');
     const controls = document.getElementById('gallery-controls');
@@ -87,6 +99,11 @@
       else dialog.setAttribute('open', '');
     };
 
+    const closeLightbox = () => {
+      if (typeof dialog?.close === 'function') dialog.close();
+      else dialog?.removeAttribute('open');
+    };
+
     try {
       const response = await fetch('data/gallery.json', { cache: 'no-store' });
       if (!response.ok) throw new Error('Gallery data could not be loaded.');
@@ -131,10 +148,10 @@
 
       lightboxPrevious?.addEventListener('click', () => showLightboxItem(lightboxIndex - 1));
       lightboxNext?.addEventListener('click', () => showLightboxItem(lightboxIndex + 1));
-      lightboxClose?.addEventListener('click', () => dialog.close());
+      lightboxClose?.addEventListener('click', closeLightbox);
 
       dialog?.addEventListener('click', (event) => {
-        if (event.target === dialog) dialog.close();
+        if (event.target === dialog) closeLightbox();
       });
 
       dialog?.addEventListener('keydown', (event) => {
@@ -163,17 +180,17 @@
     };
 
     applySelection(
-      sessionStorage.getItem('umnothoEnquiryType') || 'Request a Quote',
-      sessionStorage.getItem('umnothoService') || ''
+      storageGet('umnothoEnquiryType') || 'Request a Quote',
+      storageGet('umnothoService') || ''
     );
 
     document.querySelectorAll('.quote-link, .service-enquiry').forEach((link) => {
       link.addEventListener('click', () => {
         const enquiry = link.dataset.enquiry || 'Request a Quote';
         const service = link.dataset.service || '';
-        sessionStorage.setItem('umnothoEnquiryType', enquiry);
-        if (service) sessionStorage.setItem('umnothoService', service);
-        else sessionStorage.removeItem('umnothoService');
+        storageSet('umnothoEnquiryType', enquiry);
+        if (service) storageSet('umnothoService', service);
+        else storageRemove('umnothoService');
         applySelection(enquiry, service);
       });
     });
@@ -226,8 +243,8 @@
         status.textContent = 'Thank you. Your enquiry has been sent to Umnotho Hygiene.';
         form.reset();
         enquirySelect.value = 'Request a Quote';
-        sessionStorage.removeItem('umnothoService');
-        sessionStorage.setItem('umnothoEnquiryType', 'Request a Quote');
+        storageRemove('umnothoService');
+        storageSet('umnothoEnquiryType', 'Request a Quote');
       } catch (error) {
         console.error(error);
         status.className = 'form-status error';
