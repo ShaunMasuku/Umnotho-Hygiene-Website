@@ -344,8 +344,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 360px;
-  padding: 32px;
+  min-height: 520px;
+  padding: 30px;
   overflow: hidden;
   border: 1px solid #dce7e4;
   border-radius: 23px;
@@ -365,15 +365,7 @@
 }
 
 .service-card::after {
-  content: "";
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  top: -78px;
-  right: -70px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--service-accent) 8%, transparent);
-  pointer-events: none;
+  display: none;
 }
 
 .service-card:hover {
@@ -388,6 +380,41 @@
 .service-cleaning { --service-accent: var(--blue); }
 .service-ppe { --service-accent: #355c7d; }
 .service-facility { --service-accent: var(--bright-green); }
+
+.service-card-image {
+  position: relative;
+  height: 188px;
+  margin: -30px -30px 26px;
+  overflow: hidden;
+  background: #edf4f1;
+}
+
+.service-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 -1px 0 rgba(14, 39, 66, .08);
+  pointer-events: none;
+}
+
+.service-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.service-card:hover .service-card-image img {
+  transform: scale(1.025);
+}
+
+.service-medical .service-card-image img { object-position: center 58%; }
+.service-sanitary .service-card-image img { object-position: center 48%; }
+.service-pest .service-card-image img { object-position: center 36%; }
+.service-cleaning .service-card-image img { object-position: center 38%; }
+.service-ppe .service-card-image img { object-position: center 50%; }
+.service-facility .service-card-image img { object-position: center 40%; }
 
 .service-card-top {
   position: relative;
@@ -407,7 +434,7 @@
 }
 
 .service-card h3 {
-  margin: 24px 0 12px;
+  margin: 20px 0 12px;
   font-size: clamp(1.2rem, 1.7vw, 1.48rem);
   line-height: 1.2;
 }
@@ -679,7 +706,13 @@
   }
 
   .service-card {
-    min-height: 330px;
+    min-height: auto;
+    padding: 26px;
+  }
+
+  .service-card-image {
+    height: 220px;
+    margin: -26px -26px 24px;
   }
 
   .service-benefits {
