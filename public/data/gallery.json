@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": 1,
+    "src": "assets/gallery/001-clinical-waste-syringes.jpg",
+    "alt": "Umnotho Hygiene gallery image 1"
+  },
+  {
+    "id": 2,
+    "src": "assets/gallery/002-cleaning-spray.jpg",
+    "alt": "Umnotho Hygiene gallery image 2"
+  },
+  {
+    "id": 3,
+    "src": "assets/gallery/003-fumigation-treatment.jpg",
+    "alt": "Umnotho Hygiene gallery image 3"
+  },
+  {
+    "id": 4,
+    "src": "assets/gallery/004-fumigation-wide.jpg",
+    "alt": "Umnotho Hygiene gallery image 4"
+  },
+  {
+    "id": 5,
+    "src": "assets/gallery/005-fumigation-overhead.jpg",
+    "alt": "Umnotho Hygiene gallery image 5"
+  },
+  {
+    "id": 6,
+    "src": "assets/gallery/006-fumigation-close.jpg",
+    "alt": "Umnotho Hygiene gallery image 6"
+  },
+  {
+    "id": 7,
+    "src": "assets/gallery/007-clinical-waste-bin.jpg",
+    "alt": "Umnotho Hygiene gallery image 7"
+  },
+  {
+    "id": 8,
+    "src": "assets/gallery/008-biohazard-facility.jpg",
+    "alt": "Umnotho Hygiene gallery image 8"
+  }
+]
