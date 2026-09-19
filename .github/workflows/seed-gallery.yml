@@ -1,0 +1,67 @@
+name: Seed gallery photography
+
+on:
+  push:
+    branches:
+      - add-site-photography
+    paths:
+      - .github/workflows/seed-gallery.yml
+
+permissions:
+  contents: write
+
+jobs:
+  seed-gallery:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          ref: add-site-photography
+
+      - name: Download initial gallery photography
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p public/assets/gallery
+
+          download_image() {
+            local photo_id="$1"
+            local destination="$2"
+            local url="https://images.pexels.com/photos/${photo_id}/pexels-photo-${photo_id}.jpeg?auto=compress&cs=tinysrgb&w=1400"
+
+            echo "Downloading ${photo_id} -> ${destination}"
+            curl --fail --location --silent --show-error --retry 3 --retry-delay 2 "${url}" --output "${destination}"
+          }
+
+          download_image 8577983  public/assets/gallery/001-clinical-waste-syringes.jpg
+          download_image 28576625 public/assets/gallery/002-cleaning-spray.jpg
+          download_image 4176297  public/assets/gallery/003-fumigation-treatment.jpg
+          download_image 4176307  public/assets/gallery/004-fumigation-wide.jpg
+          download_image 4176543  public/assets/gallery/005-fumigation-overhead.jpg
+          download_image 4176548  public/assets/gallery/006-fumigation-close.jpg
+          download_image 10058483 public/assets/gallery/007-clinical-waste-bin.jpg
+          download_image 35531232 public/assets/gallery/008-biohazard-facility.jpg
+
+      - name: Generate gallery manifest
+        run: npm run build
+
+      - name: Commit gallery assets
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add public/assets/gallery public/data/gallery.json
+
+          if git diff --cached --quiet; then
+            echo "No gallery changes to commit."
+            exit 0
+          fi
+
+          git commit -m "content: add initial gallery photography"
+          git push origin HEAD:add-site-photography
